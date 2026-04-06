@@ -1,6 +1,6 @@
 export function getConfig() {
   const args = process.argv.slice(2);
-  let url = process.env.FRAPPE_URL || "https://team.boxme.asia";
+  let url = process.env.FRAPPE_URL || "https://lms.yourdomain.com";
   let token = process.env.FRAPPE_API_TOKEN || "";
 
   for (let i = 0; i < args.length; i++) {
@@ -14,7 +14,7 @@ export function getConfig() {
   }
 
   if (!token) {
-    throw new Error("Missing API Token. Vui lòng cung cấp tham số --api_token 'API_KEY:API_SECRET' hoặc qua biến môi trường FRAPPE_API_TOKEN.");
+    throw new Error("Missing API Token. Vui lòng cung cấp tham số --api_token hoặc qua biến môi trường FRAPPE_API_TOKEN.");
   }
 
   url = url.replace(/\/$/, "");

@@ -29,13 +29,12 @@ Sau đó, hãy nhắc AI sử dụng skill **`@/cm-lms-course-creator`** để t
 
 ## Yêu cầu
 - Đã cài đặt [Node.js](https://nodejs.org/en) (v18 trở lên).
-- Bạn có quyền Admin trên Frappe (Ví dụ: `team.boxme.asia`) để sinh Access Token.
+- Bạn có quyền Admin trên Frappe (Ví dụ: `lms.yourdomain.com`) để sinh Access Token.
 
 ## Lấy Access Token từ Frappe
-1. Đăng nhập vào hệ thống LMS (VD: `https://team.boxme.asia/desk`).
+1. Đăng nhập vào hệ thống LMS (VD: `https://lms.yourdomain.com/desk`).
 2. Vào **My Settings** (hoặc User) -> **API Access**.
-3. Bấm **Generate Keys**. Ghi lại `API Key` và `API Secret`.
-4. Token của bạn sẽ là chuỗi ghép lại bằng dấu hai chấm `:`. Ví dụ: `da102938ab:bc82639201`.
+3. Bấm **Generate Keys** để tạo mới (hoặc sử dụng token bạn đang có). Bạn cần lưu lại mã **API Token**.
 
 ---
 
@@ -44,10 +43,10 @@ Sau đó, hãy nhắc AI sử dụng skill **`@/cm-lms-course-creator`** để t
 ### 1. Dùng cho ứng dụng Antigravity Desktop
 Nếu bạn đang dùng Antigravity:
 1. Vào mục `Plugins -> Manage -> Add marketplace`.
-2. Dán link repository Github này vào ô URL (ví dụ: `omisocial/frappe-lms-mcp`).
+2. Dán link repository Github này vào ô URL (ví dụ: `tody-agent/frappe-lms-plugin`).
 3. Giao diện sẽ yêu cầu bạn truyền các tham số. Điền:
-   - `--frappe_url`: Điền `https://team.boxme.asia`
-   - `--api_token`: Điền chuỗi token `Key:Secret` của bạn vào đây.
+   - `--frappe_url`: Điền `https://lms.yourdomain.com`
+   - `--api_token`: Điền chuỗi API token của bạn vào đây.
 
 ### 2. Dùng cho Claude Desktop
 1. Tải ứng dụng Claude Desktop.
@@ -63,9 +62,9 @@ Nếu bạn đang dùng Antigravity:
          "command": "npx",
          "args": [
            "-y",
-           "github:omisocial/frappe-lms-mcp",
-           "--frappe_url", "https://team.boxme.asia",
-           "--api_token", "api_key_cua_ban:api_secret_cua_ban"
+           "github:tody-agent/frappe-lms-plugin",
+           "--frappe_url", "https://lms.yourdomain.com",
+           "--api_token", "api_token_cua_ban"
          ]
        }
      }
@@ -78,7 +77,7 @@ Nếu bạn đang dùng Antigravity:
 2. Thêm một server mới:
    - **Type**: `command`
    - **Name**: `frappe-lms`
-   - **Command**: `npx -y github:omisocial/frappe-lms-mcp --frappe_url "https://team.boxme.asia" --api_token "key:secret"`
+   - **Command**: `npx -y github:tody-agent/frappe-lms-plugin --frappe_url "https://lms.yourdomain.com" --api_token "api_token_cua_ban"`
 
 ---
 

@@ -20,13 +20,13 @@ export async function runSetup() {
     while (!["1", "2", "3", "4"].includes(agentChoice)) {
         agentChoice = (await ask("\nNhập lựa chọn của bạn (1-4): ")).trim();
     }
-    const defaultUrl = "https://team.boxme.asia";
+    const defaultUrl = "https://lms.yourdomain.com";
     let url = (await ask(`\nNhập link LMS của bạn (Mặc định: ${defaultUrl}): `)).trim();
     if (!url)
         url = defaultUrl;
     let token = "";
     while (!token) {
-        token = (await ask("Nhập API Token của bạn (Định dạng Key:Secret): ")).trim();
+        token = (await ask("Nhập API Token của bạn: ")).trim();
         if (!token)
             console.log("Token không được để trống!");
     }

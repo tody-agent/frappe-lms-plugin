@@ -1,7 +1,7 @@
 {
   "name": "frappe-lms-mcp",
   "version": "1.0.0",
-  "description": "MCP Server for Frappe LMS — quản lý khóa học trên team.boxme.asia",
+  "description": "MCP Server for Frappe LMS",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
