@@ -3,6 +3,7 @@ import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
 import { getConfig } from "./config.js";
+import { runSetup } from "./setup.js";
 import { FrappeLMSClient } from "./frappe-client.js";
 
 const TOOLS = [
@@ -182,6 +183,11 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 });
 
 async function main() {
+  if (process.argv[2] === "setup") {
+    await runSetup();
+    process.exit(0);
+  }
+
   try {
     const config = getConfig();
     const transport = new StdioServerTransport();

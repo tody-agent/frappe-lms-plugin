@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "docx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "6962db07127ee540a56e4677f65576d0727668a1d67f7da8bc978f10791c2bfe"
+    },
+    "docx-to-markdown": {
+      "source": "duc01226/easyplatform",
+      "sourceType": "github",
+      "computedHash": "64d908557d64d59c5aec2a0d245eba29c28e98c39a5d7ccad3d25bacc044af61"
+    },
+    "pdf": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "cfbc539377088ca7e44a813b30c306327385bbd973cd7a721e1743f60837dd62"
+    },
+    "pdf-to-markdown": {
+      "source": "duc01226/easyplatform",
+      "sourceType": "github",
+      "computedHash": "97f0bb61c2f6624d36224ed14104b5da680158f9d2ce2b2077956cec8c257d15"
+    },
+    "xlsx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "efd0c8011cf0677d8075cf93867ecec804f9a8754a777e1d2fdb46197e9c247f"
+    }
+  }
+}

@@ -14,6 +14,19 @@
 - **Audit Log:** Mọi hành động thao tác (Thêm/Sửa/Xóa) đều được ghi nhận (Log) lại vào cửa sổ màn hình console trên Antigravity/Claude.
 - Khuyến nghị: Sử dụng tài khoản có Role giới hạn (không cấp tài khoản System Manager) cho Token.
 
+## Cài đặt AI Skills (Khuyên dùng)
+Để AI có khả năng đọc các tài liệu văn bản (Word, PDF) và tự động tạo khoá học, bạn cần cài đặt các **Skills** hỗ trợ. 
+Mở Terminal trong dự án của bạn và chạy lệnh sau:
+```bash
+npx -y skills add https://github.com/anthropics/skills --skill docx --yes
+npx -y skills add https://github.com/anthropics/skills --skill xlsx --yes
+npx -y skills add https://github.com/anthropics/skills --skill pdf --yes
+npx -y skills add https://github.com/duc01226/easyplatform --skill pdf-to-markdown --yes
+npx -y skills add https://github.com/duc01226/easyplatform --skill docx-to-markdown --yes
+```
+Sau đó, hãy nhắc AI sử dụng skill **`@/cm-lms-course-creator`** để tạo khóa học!
+
+
 ## Yêu cầu
 - Đã cài đặt [Node.js](https://nodejs.org/en) (v18 trở lên).
 - Bạn có quyền Admin trên Frappe (Ví dụ: `team.boxme.asia`) để sinh Access Token.
