@@ -1,0 +1,16 @@
+{
+  "name": "frappe-lms-plugin",
+  "version": "1.0.0",
+  "description": "Quản lý khóa học trên Frappe LMS tự động thông qua AI Agents",
+  "dependencies": ["node", "npm"],
+  "mcp": {
+    "command": "node",
+    "args": [
+      "./dist/index.js",
+      "--frappe_url",
+      "{FRAPPE_URL}",
+      "--api_token",
+      "{FRAPPE_API_TOKEN}"
+    ]
+  }
+}
